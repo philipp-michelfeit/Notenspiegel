@@ -1,4 +1,4 @@
-package de.musin.bsinfo.notenspiegelmodel;
+package eu.bsinfo.notenspiegelmodel;
 
 import java.io.Serializable;
 

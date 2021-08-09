@@ -1,4 +1,4 @@
-package de.musin.bsinfo.notenspiegelview;
+package eu.bsinfo.notenspiegelview;
 
 import java.awt.*;
 import java.awt.event.*;

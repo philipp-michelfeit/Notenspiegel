@@ -1,6 +1,6 @@
-package de.musin.bsinfo.notenspiegelcontroller;
+package eu.bsinfo.notenspiegelcontroller;
 
-import de.musin.bsinfo.notenspiegelmodel.NotenspiegelModel;
+import eu.bsinfo.notenspiegelmodel.NotenspiegelModel;
 
 /**
  * @author michel0p
