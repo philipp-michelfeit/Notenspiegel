@@ -46,9 +46,6 @@ public class NotenspiegelController {
 	 * Methode, die vor dem Beenden des Programms aufgerufen wird
 	 */
 	public final void stop() {
-
-		// this.nm.save(1);
-		// this.nm.save(2);
 		this.nm.makePDF();
 		this.nm.save(3);
 		System.exit(0);

@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 /**
  * @author michel0p
- *
+ * 
  */
 public class NotenspiegelModel extends AbstractTableModel {
 
@@ -36,7 +36,7 @@ public class NotenspiegelModel extends AbstractTableModel {
 
 	/**
 	 * Konstruktor der Klasse {@link NotenspiegelModel}
-	 *
+	 * 
 	 * @param modus
 	 *            Modus
 	 */
@@ -51,7 +51,7 @@ public class NotenspiegelModel extends AbstractTableModel {
 			// Deserialisierung von this.faecher aus Textdatei
 			try {
 
-				File file = new File("D:/Notenspiegel/michel0p/save/notenspiegel.txt");
+				File file = new File("D:/michel0p/save/notenspiegel.txt");
 				BufferedReader in = new BufferedReader(new FileReader(file));
 
 				if (file.length() == 0) {
@@ -87,7 +87,7 @@ public class NotenspiegelModel extends AbstractTableModel {
 			// Binäre Deserialisierung von this.faecher aus XML-Datei (mit XML-Parser)
 			try {
 
-				File file = new File("D:/Notenspiegel/michel0p/save/notenspiegel.xml");
+				File file = new File("D:/michel0p/save/notenspiegel.xml");
 				FileInputStream in = new FileInputStream(file);
 				XMLInputFactory factory = XMLInputFactory.newInstance();
 				XMLStreamReader parser = factory.createXMLStreamReader(in);
@@ -133,8 +133,8 @@ public class NotenspiegelModel extends AbstractTableModel {
 			try {
 
 				// File file = new
-				// File("/home/MEDENT-ISMANING/michel0p/save/notenspiegel.dat");
-				File file = new File("D:/Notenspiegel/michel0p/save/notenspiegel.bin");
+				// File("D:/michel0p/save/notenspiegel.dat");
+				File file = new File("D:/michel0p/save/notenspiegel.bin");
 				FileInputStream fileIn = new FileInputStream(file);
 				ObjectInputStream in = new ObjectInputStream(fileIn);
 
@@ -204,7 +204,7 @@ public class NotenspiegelModel extends AbstractTableModel {
 	// ********************************************************************************************
 
 	// keine benötigt !
-
+	
 	// ********************************************************************************************
 	// *** Weitere Methoden ***
 	// ********************************************************************************************
@@ -221,7 +221,7 @@ public class NotenspiegelModel extends AbstractTableModel {
 			Document doc = new Document(PageSize.A4.rotate());
 
 			FileOutputStream out = new FileOutputStream(
-					"D:/Notenspiegel/michel0p/save/notenspiegel.pdf");
+					"D:/michel0p/save/notenspiegel.pdf");
 
 			// Neue PDFWriter-Instanz holen
 			PdfWriter.getInstance(doc, out);
@@ -263,15 +263,15 @@ public class NotenspiegelModel extends AbstractTableModel {
 
 			// Inhalt aus this.faecher in Tabelle schreiben
 			for (int i = 0; i < this.getRowCount(); i++) {
-
+				
 				for(int j = 0; j < this.getColumnCount(); j++) {
-
+					
 					cell = new PdfPCell(new Phrase((String)this.getValueAt(i, j)));
 					cell.setPaddingTop(5);
 					cell.setPaddingBottom(5);
 					cell.setHorizontalAlignment(Element.ALIGN_CENTER);
 					table.addCell(cell);
-
+					
 				}
 			}
 
@@ -337,7 +337,7 @@ public class NotenspiegelModel extends AbstractTableModel {
 			// Serialisierung von this.faecher in Textdatei
 			try {
 
-				File file = new File("D:/Notenspiegel/michel0p/save/notenspiegel.txt");
+				File file = new File("D:/michel0p/save/notenspiegel.txt");
 				PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file)));
 				out.println(this.faecher.size());
 				for (Fach f : this.faecher.values()) {
@@ -357,7 +357,7 @@ public class NotenspiegelModel extends AbstractTableModel {
 		case 2:
 			// Binäre Serialisierung von this.faecher in XML-Datei
 			try {
-				File file = new File("D:/Notenspiegel/michel0p/save/notenspiegel.xml");
+				File file = new File("D:/michel0p/save/notenspiegel.xml");
 				FileOutputStream out = new FileOutputStream(file);
 				DecimalFormat df = new DecimalFormat();
 
@@ -445,8 +445,8 @@ public class NotenspiegelModel extends AbstractTableModel {
 			try {
 
 				// File file = new
-				// File("/home/MEDENT-ISMANING/michel0p/save/notenspiegel.dat");
-				File file = new File("D:/Notenspiegel/michel0p/save/notenspiegel.bin");
+				// File("D:/michel0p/save/notenspiegel.dat");
+				File file = new File("D:/michel0p/save/notenspiegel.bin");
 				FileOutputStream fileOut = new FileOutputStream(file);
 				ObjectOutputStream out = new ObjectOutputStream(fileOut);
 

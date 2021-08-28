@@ -28,8 +28,6 @@ public class Notenspiegel {
 	public Notenspiegel() {
 
 		if (this.nm == null && this.nv == null && this.nc == null) {
-			// this.nm = new NotenspiegelModel(1);
-			// this.nm = new NotenspiegelModel(2);
 			this.nm = new NotenspiegelModel(3);
 			this.nc = new NotenspiegelController(this.nm);
 			this.nv = new NotenspiegelView(this.nm, this.nc);
